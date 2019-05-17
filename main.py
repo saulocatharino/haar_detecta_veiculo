@@ -15,7 +15,7 @@ while True:
         img = cv2.resize(img,(0,0),None, .6,.6)
 	gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-	cars = car_cascade.detectMultiScale(gray, 1.4, 6)
+	cars = car_cascade.detectMultiScale(gray, 2, 4)
 
 	for (x, y, w, h) in cars :
 			if h > 30:
